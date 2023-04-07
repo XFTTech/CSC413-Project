@@ -8,9 +8,9 @@ def read_data(file: str):
 
 def process_data(leetcode_data: pd.DataFrame):
     print(leetcode_data.columns)
-    # needed columns: ['id', 'title', 'description', 'related_topics']
+    # needed columns: ['title', 'description', 'related_topics']
     # drop unnecessary columns
-    leetcode_data = leetcode_data[['id', 'title', 'description', 'related_topics']]
+    leetcode_data = leetcode_data[['description', 'related_topics']]
     # first drop rows with no description or related topics
     for index, row in leetcode_data.iterrows():
         if pd.isnull(row['description']) or pd.isnull(row['related_topics']):
