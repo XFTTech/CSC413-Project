@@ -1,4 +1,3 @@
-# read csv data
 import pandas as pd
 
 raw_data_path = 'data_preprocessing/data_raw/'
