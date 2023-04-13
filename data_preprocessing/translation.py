@@ -10,20 +10,22 @@ def perform_data_augmentation(df):
     df_cp = df.copy()
     for index, row in df_cp.iterrows():
         # translate from english to chinese
-        translated = translator.translate(row['description'], dest='zh-cn')
+        translated = translator.translate(row['description'], dest='fr')
+        # translated = translator.translate(row['description'], dest='zh-cn')
         # translate from chinese to english
         translated = translator.translate(translated.text, dest='en')
         # only change first column (description) while keeping the rest the same
         new_row = row.copy()
         new_row['description'] = translated.text
         # append new row to dataframe
-        df = df.append(new_row, ignore_index=True)
+        # df = df.append(new_row, ignore_index=True)
+        df = df._append(new_row, ignore_index=True)
         print(index)
     print(df.shape)
     return df
 
 if __name__ == '__main__':
-    df = pd.read_csv('./data/leetcode.csv')
+    df = pd.read_csv('data/leetcode.csv')
     # test_row = df.iloc[0]
     # t = Translator()
     # print(df.shape)
@@ -37,5 +39,7 @@ if __name__ == '__main__':
     # # print last row
     # print(df.iloc[-1])
     df = perform_data_augmentation(df)
+    df2 = pd.read_csv('data/leetcode_augmented.csv')
+    df2 = df2._append(df, ignore_index=True)
+    df2.to_csv('data/leetcode_augmented-2.csv', index=False)
     # save to new csv file
-    pd.DataFrame(df).to_csv('./data/leetcode_augmented.csv', index=False)
