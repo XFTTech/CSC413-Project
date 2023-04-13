@@ -26,18 +26,6 @@ def perform_data_augmentation(df):
 
 if __name__ == '__main__':
     df = pd.read_csv('data/leetcode.csv')
-    # test_row = df.iloc[0]
-    # t = Translator()
-    # print(df.shape)
-    # res = t.translate(test_row['description'], dest='zh-cn')
-    # print(res.text)
-    # res = t.translate(res.text, dest='en')
-    # print(res.text)
-    # # append new row to dataframe
-    # test_row['description'] = res.text
-    # df = df.append(test_row, ignore_index=True)
-    # # print last row
-    # print(df.iloc[-1])
     df = perform_data_augmentation(df)
     df2 = pd.read_csv('data/leetcode_augmented.csv')
     df2 = df2._append(df, ignore_index=True)
