@@ -69,13 +69,19 @@ To address this issue, we have undertaken the development of a Neural Network th
 Instead of fetching data from Leetcode, we decide to use the processed dataset from gzipChrist\cite{DATA} on \href{https://www.kaggle.com/}{Kaggle}. The dataset comprises 1825 problem descriptions and their corresponding required algorithms or data structures. To facilitate analysis, we developed a Python script to vectorize the labels associated with each problem. Following processing, the dataset contains 1825 rows, with the first column representing the problem description and the remaining columns indicating the presence or absence of the corresponding labels, denoted by binary values of 0 or 1.
 \section{Model Architecture}
 
-\subsection{BERT Pre-training Model}
+\subsection{BERT Pre-trained Model}
 
+\subsubsection{Motivation}
+\subsubsection{Design}
 \subsubsection{Training}
+\subsubsection{Result}
 
 \subsection{LSTM Model}
 
+\subsubsection{Motivation}
+\subsubsection{Design}
 \subsubsection{Training}
+\subsubsection{Result}
 
 \section{Comparison of Models}
 
@@ -273,7 +279,7 @@ In examining our dataset, several limitations must be acknowledged to ensure a c
 %\end{ack}
 
 %\section*{References}
-
+{
 \small
 \bibliographystyle{plain}
 \begin{thebibliography}{9}
@@ -284,8 +290,7 @@ S. Hochreiter and J. Schmidhuber, "Long Short-Term Memory," in Neural Computatio
 \bibitem{DATA}
 gzipChrist. (2023, February). Leetcode Problem Dataset, Version 8.82. Retrieved April 10, 2023 from https://www.kaggle.com/datasets/gzipchrist/leetcode-problem-dataset.
 \end{thebibliography}
-
-
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\section*{Checklist}
 %
