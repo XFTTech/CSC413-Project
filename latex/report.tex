@@ -80,6 +80,8 @@ Instead of fetching data from Leetcode, we decide to use the processed dataset f
 \section{Comparison of Models}
 
 \section{Limitations}
+In examining our dataset, several limitations must be acknowledged to ensure a comprehensive understanding of its potential impact on the analysis. Firstly, the dataset is relatively small, as generating LeetCode problems is a complex task and the total number of problems available is less than 3,000. Secondly, our model is limited to handling text input, rendering it incapable of addressing problems that necessitate image understanding. Thirdly, the labeling of LeetCode problems is inherently biased, as the majority of coding problems are associated with major data structures, such as arrays, or widely-used algorithms like dynamic programming and greedy techniques. Lastly, the presence of mathematical formulas and special characters in problem statements may hinder the model’s tokenizer from optimally processing the input for training.
+
 
 \section{Conclusion}
 
@@ -270,8 +272,8 @@ Instead of fetching data from Leetcode, we decide to use the processed dataset f
 %Do {\bf not} include this section in the anonymized submission, only in the final paper. You can use the \texttt{ack} environment provided in the style file to autmoatically hide this section in the anonymized submission.
 %\end{ack}
 
-\section*{References}
-{
+%\section*{References}
+
 \small
 \bibliographystyle{plain}
 \begin{thebibliography}{9}
@@ -282,7 +284,7 @@ S. Hochreiter and J. Schmidhuber, "Long Short-Term Memory," in Neural Computatio
 \bibitem{DATA}
 gzipChrist. (2023, February). Leetcode Problem Dataset, Version 8.82. Retrieved April 10, 2023 from https://www.kaggle.com/datasets/gzipchrist/leetcode-problem-dataset.
 \end{thebibliography}
-}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\section*{Checklist}
